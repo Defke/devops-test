@@ -52,16 +52,18 @@ start() {
            else
                echo "$APP_NAME run success, Pid is $pid"
             fi
+    else
+        echo "$APP_NAME is already running pid is $pid"
     fi
 }
 
 stop() {
     is_run
     if [ $? -eq "0" ]; then
-        echo "$APP_NAME is already running.pid = $pid"
+        echo "$APP_NAME is not running"
     else
         kill -9 $pid
-        echo "程序已经停止"
+        echo "kill success pid is $pid"
      fi
 }
 
