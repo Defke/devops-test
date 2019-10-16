@@ -17,9 +17,10 @@ deploy() {
      pid=`ps -ef | grep ./$APP | grep -v grep | awk '{print $2}'`
      #kill pid
      for id in $pid
+     do
         kill -9 $id
         echo "kill $id"
-      do
+     done
       cd $DIR
        nohup ./$APP_NAME > run.log &
        if [ $? = 0 ]; then
