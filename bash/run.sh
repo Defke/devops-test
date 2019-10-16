@@ -24,12 +24,7 @@ deploy() {
         echo "kill $id"
      done
       cd $DIR
-       nohup ./$APP_NAME >> run.log 2>&1 &
-       if [ $? = 0 ]; then
-               echo "启动失败"
-              else
-               echo "启动成功"
-        fi
+      nohup ./$APP_NAME>run.log 2>&1 &
 }
 
 
@@ -55,16 +50,17 @@ is_run() {
 #程序启动
 start() {
     is_run
+    #启动程序
     if [ $? -eq "0" ]; then
        cd $DIR
-       nohup ./$APP_NAME > run.log 2>&1 &
-       echo "ddd $?"
-       if [ $? = 0 ]; then
-        echo "启动失败"
-       else
-        echo "启动成功"
-        fi
+       nohup ./$APP_NAME>run.log 2>&1 &
     fi
+    is_run
+    if [ $? -eq "0"]; then
+        echo "启动失败"
+    else
+        echo "启动失败"
+     fi
 }
 
 #程序关闭
