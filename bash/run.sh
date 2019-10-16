@@ -4,7 +4,7 @@ MODE=dev
 #版本号
 VER=3.1.0
 #程序目录
-DIR=/go/src/$MODE/$VER
+DIR=/home/$MODE/$VER
 #程序名称
 APP_NAME=devops-test
 
@@ -27,7 +27,7 @@ deploy() {
                echo "启动失败"
               else
                echo "启动成功"
-               fi
+        fi
 }
 
 
