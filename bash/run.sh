@@ -1,19 +1,18 @@
+#!/bin/bash
 
-#开发模式
 MODE=dev
-#版本号
+
 VER=3.1.0
-#程序目录
+
 DIR=/home/$MODE/$VER
-#程序名称
+
 APP_NAME=devops-test
-#程序目录
+
 DIR=/home/holder/$MODE/$VER/$APP_NAME
 
 deploy() {
-    #是否存在目录
     if [ ! -d $DIR ]; then
-        echo "准备创建目录 $DIR"
+        echo "create dir $DIR"
         midir -p DIR
     fi
      pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
@@ -28,17 +27,13 @@ deploy() {
 }
 
 
-
-#使用说明，用来提示输入参数
 usage() {
     echo "Usage: sh 执行脚本.sh [start|stop|restart|status|deploy]"
     exit 1
 }
 
-#检查程序是否运行
 is_run() {
     pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
-    #运行返回1，未运行返回0
     if [ -z "$pid" ]; then
         return 0
      else
@@ -46,10 +41,8 @@ is_run() {
     fi
 }
 
-#程序启动
 start() {
     is_run
-    #启动程序
     if [ $? -eq "0" ]; then
        cd $DIR
        nohup ./$APP_NAME>run.log 2>&1 &
@@ -62,7 +55,6 @@ start() {
     fi
 }
 
-#程序关闭
 stop() {
     is_run
     if [ $? -eq "0" ]; then
@@ -73,7 +65,6 @@ stop() {
      fi
 }
 
-#输出运行状态
 status(){
   is_run
   if [ $? -eq "0" ]; then
@@ -83,13 +74,11 @@ status(){
   fi
 }
 
-#程序重启
 restart() {
   stop
   start
 }
 
-#根据输入参数，选择执行对应方法，不输入则执行使用说明
 case "$1" in
   "start")
     start
