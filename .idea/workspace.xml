@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a02f2807-b75f-4a84-8c45-f31ecd4639af" name="Default Changelist" comment="">
+    <list default="true" id="a02f2807-b75f-4a84-8c45-f31ecd4639af" name="Default Changelist" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bash/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bash/run.sh" afterDir="false" />
     </list>
@@ -45,7 +45,7 @@
           <entry key="Dockerfile" value="247" />
           <entry key="gitignore" value="7" />
           <entry key="go" value="148" />
-          <entry key="sh" value="1285" />
+          <entry key="sh" value="1400" />
           <entry key="txt" value="1" />
           <entry key="yaml" value="28" />
         </counts>
@@ -53,7 +53,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Go" value="148" />
-          <entry key="PLAIN_TEXT" value="1540" />
+          <entry key="PLAIN_TEXT" value="1655" />
           <entry key="YAML" value="28" />
         </counts>
       </usages-collector>
@@ -82,8 +82,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bash/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-250">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="1800">
+              <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -199,7 +199,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
@@ -266,8 +266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bash/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-250">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="1800">
+          <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
         </state>
       </provider>
     </entry>
