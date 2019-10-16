@@ -54,13 +54,13 @@ start() {
     if [ $? -eq "0" ]; then
        cd $DIR
        nohup ./$APP_NAME>run.log 2>&1 &
+        is_run
+           if [ $? -eq "0" ]; then
+               echo "启动失败"
+           else
+               echo "启动失败"
+            fi
     fi
-    is_run
-    if [ $? -eq "0"]; then
-        echo "启动失败"
-    else
-        echo "启动失败"
-     fi
 }
 
 #程序关闭
