@@ -57,7 +57,7 @@ start() {
     is_run
     if [ $? -eq "0" ]; then
        cd $DIR
-       nohup ./$APP_NAME > run.log &
+       nohup ./$APP_NAME > run.log 2 > 1& &
        echo "ddd $?"
        if [ $? = 0 ]; then
         echo "启动失败"
