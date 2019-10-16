@@ -4,7 +4,7 @@ MODE=dev
 #版本号
 VER=3.1.0
 #程序目录
-DIR=/go/src/$mode/ver
+DIR=/go/src/$mode/$VER
 #程序名称
 APP_NAME=devops-test
 
@@ -40,7 +40,7 @@ usage() {
 
 #检查程序是否运行
 is_run() {
-    pid=`ps -ef | grep ./$APP | grep -v grep | awk '{print $2}'`
+    pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
     echo "运行的pid $pid"
     #运行返回1，未运行返回0
     if [ -z "$pid" ]; then
