@@ -58,7 +58,7 @@ start() {
            if [ $? -eq "0" ]; then
                echo "启动失败"
            else
-               echo "启动失败"
+               echo "启动成功 $?"
             fi
     fi
 }
