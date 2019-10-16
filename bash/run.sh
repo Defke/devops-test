@@ -8,7 +8,7 @@ DIR=/home/$MODE/$VER
 #程序名称
 APP_NAME=devops-test
 #程序目录
-DIR=/home/$APP_NAME/$MODE/$VER
+DIR=/home/holder/$MODE/$VER
 
 deploy() {
     #是否存在目录
