@@ -38,7 +38,6 @@ usage() {
 #检查程序是否运行
 is_run() {
     pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
-    echo "运行的pid $pid"
     #运行返回1，未运行返回0
     if [ -z "$pid" ]; then
         return 0
@@ -56,9 +55,9 @@ start() {
        nohup ./$APP_NAME>run.log 2>&1 &
         is_run
            if [ $? -eq "0" ]; then
-               echo "启动失败"
+               echo "$APP_NAME run failed"
            else
-               echo "启动成功 $?"
+               echo "$APP_NAME run success, Pid is $pid"
             fi
     fi
 }
@@ -76,7 +75,7 @@ stop() {
 
 #输出运行状态
 status(){
-  is_exist
+  is_run
   if [ $? -eq "0" ]; then
     echo "${APP_NAME} is NOT running."
   else
