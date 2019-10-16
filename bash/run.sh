@@ -24,7 +24,7 @@ deploy() {
         echo "kill $id"
      done
       cd $DIR
-       nohup ./$APP_NAME >> run.log 2 > &1 &
+       nohup ./$APP_NAME >> run.log 2>&1 &
        if [ $? = 0 ]; then
                echo "启动失败"
               else
