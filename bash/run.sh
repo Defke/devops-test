@@ -4,7 +4,7 @@ MODE=dev
 #版本号
 VER=3.1.0
 #程序目录
-DIR=/go/src/$mode/$VER
+DIR=/go/src/$MODE/$VER
 #程序名称
 APP_NAME=devops-test
 
@@ -14,7 +14,7 @@ deploy() {
         echo "准备创建目录 $DIR"
         midir -p DIR
     fi
-     pid=`ps -ef | grep ./$APP | grep -v grep | awk '{print $2}'`
+     pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
      #kill pid
      for id in $pid
      do
