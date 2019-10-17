@@ -11,4 +11,4 @@ WORKDIR /home/holder
 RUN echo $PWD
 
 EXPOSE 8089
-CMD ["nohup ./hom/devops-test &"]
+CMD ["nohup ./devops-test &"]
