@@ -8,13 +8,9 @@ DIR=/home/$MODE/$VER
 
 APP_NAME=devops-test
 
-DIR=/home/holder/$MODE/$VER/$APP_NAME
+DIR=/home/holder
 
 deploy() {
-    if [ ! -d $DIR ]; then
-        echo "create dir $DIR"
-        midir -p DIR
-    fi
      pid=`ps -ef | grep ./$APP_NAME | grep -v grep | awk '{print $2}'`
      #kill pid
      for id in $pid
