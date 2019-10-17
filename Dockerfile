@@ -8,5 +8,7 @@ COPY devops-test /home/holder
 
 WORKDIR /home/holder
 
+RUN echo $PWD
+
 EXPOSE 8089
-CMD ["nohup /home/holder/devops-test > run.log 2>&1 &"]
+CMD ["nohup ./hom/devops-test &"]
