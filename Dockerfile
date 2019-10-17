@@ -9,4 +9,4 @@ COPY devops-test /home/holder
 WORKDIR /home/holder
 
 EXPOSE 8089
-CMD ["cd /home/holder && nohup ./devops-test &"]
+CMD ["nohup ./devops-test &"]
