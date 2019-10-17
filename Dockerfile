@@ -2,11 +2,11 @@ FROM golang:1.12
 
 MAINTAINER kdfmail@qq.com
 
-RUN mkdir -p /go/src/release
+RUN mkdir -p /home/holder
 
-COPY devops-test /go/src/release
+COPY devops-test /home/holder
 
-WORKDIR /go/src/release
+WORKDIR /home/holder
 
 EXPOSE 8089
 CMD ["nohup ./devops-test > run.log &"]
